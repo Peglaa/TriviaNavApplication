@@ -11,11 +11,6 @@ import com.damir.stipancic.trivianavapplication.databinding.FragmentGameOverBind
 
 class GameOverFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,7 +20,7 @@ class GameOverFragment : Fragment() {
             inflater, R.layout.fragment_game_over, container, false
         )
 
-        binding.tryAgainButton.setOnClickListener() {
+        binding.tryAgainButton.setOnClickListener {
             findNavController().navigate(GameOverFragmentDirections.actionGameOverFragmentToGameFragment())
         }
 
